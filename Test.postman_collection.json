@@ -1,0 +1,341 @@
+{
+	"info": {
+		"_postman_id": "1f44ed6b-b1a0-4b63-81ee-a1abe43a8169",
+		"name": "Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "/v1/specialties/:id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/specialties/5c8448f328c33183d7fb998f?",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"specialties",
+						"5c8448f328c33183d7fb998f"
+					],
+					"query": [
+						{
+							"key": "limit",
+							"value": "100",
+							"disabled": true
+						},
+						{
+							"key": "offset",
+							"value": "0",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/v1/specialties",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/specialties?limit=100&offset=0&name=gas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"specialties"
+					],
+					"query": [
+						{
+							"key": "limit",
+							"value": "100"
+						},
+						{
+							"key": "offset",
+							"value": "0"
+						},
+						{
+							"key": "name",
+							"value": "gas"
+						}
+					]
+				},
+				"description": "You can pass limit, offset and name params for search and pagination (All optional)."
+			},
+			"response": []
+		},
+		{
+			"name": "/v1/specialties",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Alternative Medicine\",\n\t\"createdBy\": 1234,\n\t\"updatedBy\": 1234\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/specialties",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"specialties"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/v1/specialties/:id",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/specialties/5c84462a047b9383a92046b9",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"specialties",
+						"5c84462a047b9383a92046b9"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/v1/specialties/:id",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"updatedBy\": 1234\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/specialties/5c84469d047b9383a92046ba",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"specialties",
+						"5c84469d047b9383a92046ba"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/v1/providers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/providers?specialty=59cd1c94b6a21df46fc9ffea",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"providers"
+					],
+					"query": [
+						{
+							"key": "specialty",
+							"value": "59cd1c94b6a21df46fc9ffea"
+						}
+					]
+				},
+				"description": "You can pass limit, offset, name, firstName, lastName, middleName, email, specialty, employerId, providerType, staffStatus, assignedTo and status params for search and pagination (All optional)."
+			},
+			"response": []
+		},
+		{
+			"name": "/v1/providers/:id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/providers/59cd1ce2b6a21df46fca0012",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"providers",
+						"59cd1ce2b6a21df46fca0012"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/v1/providers",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"specialty\": \"59cd1c94b6a21df46fc9ffea\",\n    \"firstName\": \"Juan\",\n    \"lastName\": \"Velasquez\",\n    \"middleName\": \"S\",\n    \"email\": \"Brant_Stamm@yahoo.com\",\n    \"projectedStartDate\": \"2017-06-17T20:37:03.074Z\",\n    \"employerId\": 334,\n    \"providerType\": \"MD\",\n    \"staffStatus\": \"COURTESY\",\n    \"assignedTo\": 67890,\n    \"status\": \"READY_FOR_REVIEW\",\n    \"createdBy\": 73960,\n    \"createdAt\": \"2017-02-04T19:58:44.637Z\",\n    \"updatedBy\": 91050,\n    \"updatedAt\": \"2017-09-27T23:30:11.792Z\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/providers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"providers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/v1/providers/:id",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"specialty\": \"59cd1c94b6a21df46fc9ffeb\",\n\t\"firstName\": \"Sebastian\",\n    \"lastName\": \"Valencia\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/providers/5c84632729692a85f635739a",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"providers",
+						"5c84632729692a85f635739a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/v1/providers/:id",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"specialty\": \"59cd1c94b6a21df46fc9ffeb\",\n\t\"firstName\": \"Sebastian\",\n    \"lastName\": \"Valencia\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/providers/5c84632729692a85f635739a",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"providers",
+						"5c84632729692a85f635739a"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
